@@ -6,25 +6,20 @@ export default function reducer(state={
   }, action) {
 
     switch (action.type) {
-      
       case "FETCH_TWEETS": {
-        return {...state, fetching: true}
+        state.fetching = true;
+        return state
       }
+      /*
       case "FETCH_TWEETS_REJECTED": {
-        /*
-        return {...state, fetching: false, error: action.payload}
-        */
+        var state = Object.assign({}, state, {fetching: true, error: action.payload})
+        return state
       }
       case "FETCH_TWEETS_FULFILLED": {
-        /*
-        return {
-          ...state,
-          fetching: false,
-          fetched: true,
-          tweets: action.payload,
-        }
-        */
+        var state = Object.assign({}, state, {fetching: false, fetched: true, tweets: action.payload})
+        return state
       }
+      */
       case "ADD_TWEET": {
         return {
           ...state,
