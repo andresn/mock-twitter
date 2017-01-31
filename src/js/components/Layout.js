@@ -25,10 +25,11 @@ export default class Layout extends React.Component {
     var tweets = this.props.tweets;
 
     if (!tweets.length) {
-      return <button onClick={this.fetchTweets.bind(this)}>load tweets</button>
+      var fetchTweets = null;// this.fetchTweets.bind(this);
+      return <button onClick={fetchTweets}>load tweets</button>
     }
 
-    // const mappedTweets = tweets.map(tweet => <li>{tweet.text}</li>)
+    // var myListOfTweets
 
     return <div>
       <h1>{user.name}</h1>
