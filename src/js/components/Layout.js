@@ -17,21 +17,21 @@ export default class Layout extends React.Component {
   }
 
   fetchTweets() {
-    this.props.dispatch(fetchTweets())
+    // this.props.dispatch(fetchTweets())
   }
 
   render() {
-    const { user, tweets } = this.props;
+    var user = this.props.user;
+    var tweets = this.props.tweets;
 
     if (!tweets.length) {
       return <button onClick={this.fetchTweets.bind(this)}>load tweets</button>
     }
 
-    const mappedTweets = tweets.map(tweet => <li>{tweet.text}</li>)
+    // const mappedTweets = tweets.map(tweet => <li>{tweet.text}</li>)
 
     return <div>
       <h1>{user.name}</h1>
-      <ul>{mappedTweets}</ul>
     </div>
   }
 }
