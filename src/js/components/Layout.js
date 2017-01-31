@@ -25,7 +25,7 @@ export default class Layout extends React.Component {
     var tweets = this.props.tweets;
 
     if (!tweets.length) {
-      var fetchTweets = null;// this.fetchTweets.bind(this);
+      var fetchTweets = null;
       return <button onClick={fetchTweets}>load tweets</button>
     }
 

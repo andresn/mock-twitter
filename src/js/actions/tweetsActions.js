@@ -1,5 +1,7 @@
 
-export function fetchTweets() {}
+export function fetchTweets() {
+  return function(dispatch) {}
+}
 
 export function addTweet(id, text) {
   return {
